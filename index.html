@@ -3,666 +3,998 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lim Ker Sin - Professional freelance services portfolio. Typing, translation, consultation, assignment help, puzzle & LEGO assembly, colouring, Excel reporting, and video editing. Based in Kuala Lumpur, Malaysia.">
+    <meta name="description" content="Lim Ker Sin provides flexible freelance support in typing, translation, consultation, assignment assistance, Excel reporting, creative projects, LEGO and puzzle assembly, and video editing in Kuala Lumpur, Malaysia.">
+    <meta name="theme-color" content="#5B4FE9">
+    <meta property="og:title" content="Lim Ker Sin | Professional Services Portfolio">
+    <meta property="og:description" content="Flexible freelance support across documents, data, creative work, assembly, and video editing.">
+    <meta property="og:type" content="website">
     <title>Lim Ker Sin | Professional Services Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <style>
+/* ================================
+   Reset & Base
+================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- ===== Navigation ===== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">Lim Ker Sin<span>.</span></a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#gallery" class="nav-link">Samples</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+:root {
+    /* Colors */
+    --bg: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --text: #1A1A2E;
+    --text-light: #5A5A72;
+    --text-muted: #8E8EA0;
+    --primary: #5B4FE9;
+    --primary-dark: #4338CA;
+    --primary-light: #EDEAFF;
+    --accent: #F97316;
+    --accent-light: #FFF4EC;
+    --border: #E5E5F0;
+    --shadow-sm: 0 2px 8px rgba(26, 26, 46, 0.06);
+    --shadow-md: 0 4px 24px rgba(26, 26, 46, 0.08);
+    --shadow-lg: 0 12px 48px rgba(26, 26, 46, 0.12);
 
-    <!-- ===== Hero ===== -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-pattern"></div>
-        <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Lim Ker Sin</h1>
-            <p class="hero-tagline">Professional Services Provider</p>
-            <p class="hero-description">
-                Offering reliable, detail-oriented services across typing, translation, consultation,
-                assignment support, creative assembly, data reporting, and video editing.
-            </p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">View My Services</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Services Offered</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Dedication</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">Fast</span>
-                    <span class="stat-label">Turnaround</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+    /* Typography */
+    --font-head: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
-    <!-- ===== About ===== -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">About Me</span>
-                <h2 class="section-title">Who I Am & What I Do</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        With a background in Psychology, Hotel Management, IT Service Desk, and
-                        customer service, I bring a combination of people skills, technical
-                        knowledge, creativity, and attention to detail to every project. I
-                        provide a wide range of freelance services, from typing, translation,
-                        consultation, assignment assistance, and Excel reporting to video editing,
-                        livestream effects, puzzle, LEGO, and colouring projects.
-                    </p>
-                    <p>
-                        My goal is to provide reliable, accurate, and flexible support while
-                        delivering work that meets each client's specific needs. No task is too
-                        small, and every project gets my full commitment.
-                    </p>
-                    <div class="about-qualities">
-                        <div class="quality-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            <span>Reliable & On-Time</span>
-                        </div>
-                        <div class="quality-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            <span>Detail-Oriented</span>
-                        </div>
-                        <div class="quality-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            <span>Clear Communication</span>
-                        </div>
-                        <div class="quality-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            <span>Fair Pricing</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="about-card">
-                        <div class="about-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <h3>Diverse Expertise</h3>
-                        <p>Psychology, Hotel Management, IT Service Desk, and customer service — a unique blend of skills for every project.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    /* Spacing */
+    --section-pad: 100px;
+    --container-max: 1200px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
 
-    <!-- ===== Services ===== -->
-    <section class="services section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What I Offer</span>
-                <h2 class="section-title">Services & Skills</h2>
-            </div>
-            <div class="services-grid">
+    /* Transition */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-                <div class="service-card" data-category="document">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                        </svg>
-                    </div>
-                    <h3>Typing Tasks</h3>
-                    <p>Accurate and efficient typing for documents, data entry, manuscripts, and more. Fast turnaround guaranteed.</p>
-                </div>
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
 
-                <div class="service-card" data-category="professional">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Consultation</h3>
-                    <p>Professional consultation to help you plan, organize, and execute your projects effectively.</p>
-                </div>
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-                <div class="service-card" data-category="professional">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 5h12M9 3v2M5 10l4 4M14.5 4.5l5 5M9.5 14.5l5-5M10 9l5 5M14.5 9.5l5 5"/>
-                        </svg>
-                    </div>
-                    <h3>Translation</h3>
-                    <p>Accurate translation services bridging language gaps for documents, content, and communication.</p>
-                </div>
+img, svg {
+    max-width: 100%;
+    display: block;
+}
 
-                <div class="service-card" data-category="document">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="9" y1="13" x2="15" y2="13"/>
-                            <line x1="9" y1="17" x2="15" y2="17"/>
-                            <line x1="9" y1="9" x2="11" y2="9"/>
-                        </svg>
-                    </div>
-                    <h3>Assignment Helper</h3>
-                    <p>Support with academic and professional assignments — research, formatting, writing, and structure.</p>
-                </div>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-                <div class="service-card" data-category="assembly">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="8" height="8" rx="1"/>
-                            <rect x="13" y="3" width="8" height="8" rx="1"/>
-                            <rect x="3" y="13" width="8" height="8" rx="1"/>
-                            <rect x="13" y="13" width="8" height="8" rx="1"/>
-                        </svg>
-                    </div>
-                    <h3>Puzzle Assembly</h3>
-                    <p>Patient and precise assembly of jigsaw puzzles of any size and complexity. Perfect for gifts or display.</p>
-                </div>
+ul {
+    list-style: none;
+}
 
-                <div class="service-card" data-category="assembly">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3>LEGO Assembly</h3>
-                    <p>Expert LEGO set assembly following instructions precisely. From small sets to complex builds.</p>
-                </div>
+/* ================================
+   Layout Helpers
+================================ */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
-                <div class="service-card" data-category="creative">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="13.5" cy="6.5" r="2.5"/>
-                            <circle cx="17.5" cy="10.5" r="2.5"/>
-                            <circle cx="8.5" cy="7.5" r="2.5"/>
-                            <circle cx="6.5" cy="12.5" r="2.5"/>
-                            <path d="M12 22a10 10 0 1 1 0-20"/>
-                        </svg>
-                    </div>
-                    <h3>Colouring Services</h3>
-                    <p>Professional colouring for colouring books, illustrations, and creative projects with attention to detail.</p>
-                </div>
+.section {
+    padding: var(--section-pad) 0;
+}
 
-                <div class="service-card" data-category="document">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
-                        </svg>
-                    </div>
-                    <h3>Excel Data Reporting</h3>
-                    <p>Data organization, analysis, and professional reporting in Excel. Charts, pivot tables, formulas, and clean formatting.</p>
-                </div>
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
 
-                <div class="service-card" data-category="creative">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/>
-                            <path d="M8 21h8M12 17v4"/>
-                            <path d="M6 13l4-4 3 3 5-6"/>
-                        </svg>
-                    </div>
-                    <h3>Live Stream Video Editing</h3>
-                    <p>Specialized video editing for live stream effects — overlays, transitions, highlights, and stream-ready content.</p>
-                </div>
+.section-label {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
 
-                <div class="service-card" data-category="creative">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <polygon points="23 7 16 12 23 17 23 7"/>
-                            <rect x="1" y="5" width="15" height="14" rx="2"/>
-                        </svg>
-                    </div>
-                    <h3>Basic Video Editing</h3>
-                    <p>Trimming, transitions, text overlays, and clean edits to make your videos look polished and professional.</p>
-                </div>
+.section-title {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+}
 
-            </div>
-        </div>
-    </section>
+.section-subtitle {
+    margin-top: 16px;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
 
-    <!-- ===== Work Gallery / Samples ===== -->
-    <section class="gallery section" id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Sample of My Work</h2>
-                <p class="section-subtitle">A collection of real projects I've completed for clients.</p>
-            </div>
+/* ================================
+   Buttons
+================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+}
 
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="assembly">Assembly</button>
-                <button class="filter-btn" data-filter="creative">Creative & Video</button>
-                <button class="filter-btn" data-filter="document">Documents & Data</button>
-            </div>
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
 
-            <div class="gallery-grid">
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(91, 79, 233, 0.3);
+}
 
-                <!-- ===== LEGO Assembly ===== -->
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-1.JPEG" alt="3D wooden treasure chest puzzle model" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Wooden Treasure Chest</h3>
-                        <p>Intricate 3D wooden puzzle model assembled in 3.5 hours</p>
-                    </div>
-                </div>
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-2.JPEG" alt="LEGO sports car and jeep builds" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Sports Car &amp; Jeep</h3>
-                        <p>Vehicle build sets with vibrant colors and detailed parts</p>
-                    </div>
-                </div>
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-3.JPEG" alt="LEGO Cat Meow Shop building" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Cat Meow Shop</h3>
-                        <p>Detailed building set featuring a charming cat-themed shop</p>
-                    </div>
-                </div>
+.btn-large {
+    padding: 18px 48px;
+    font-size: 1.05rem;
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-5.JPEG" alt="LEGO capybara office scene" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Capybara Office Scene</h3>
-                        <p>Creative build featuring capybara figures in an office setting</p>
-                    </div>
-                </div>
+.btn-full {
+    width: 100%;
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-6.JPEG" alt="LEGO capybara bakery lineup" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Capybara Bakery</h3>
-                        <p>Complete bakery scene with capybara figures lined up</p>
-                    </div>
-                </div>
+/* ================================
+   Navigation
+================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(248, 249, 250, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-7.JPEG" alt="LEGO Cat's Nest mini cat figures" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Cat's Nest Mini Figures</h3>
-                        <p>Miniature cat figures with detailed nesting display</p>
-                    </div>
-                </div>
+.navbar.scrolled {
+    border-bottom-color: var(--border);
+    box-shadow: var(--shadow-sm);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-8.JPEG" alt="LEGO Chinese street vendor scene" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Chinese Street Vendor</h3>
-                        <p>Cultural scene depicting a traditional street food stall</p>
-                    </div>
-                </div>
+.nav-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-9.JPEG" alt="LEGO vintage typewriter build" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Vintage Typewriter</h3>
-                        <p>Detailed replica build of a classic typewriter</p>
-                    </div>
-                </div>
+.nav-logo {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Lego-10.JPEG" alt="LEGO Chinese pavilion temple build" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Chinese Pavilion</h3>
-                        <p>Traditional Chinese architecture pavilion build</p>
-                    </div>
-                </div>
+.nav-logo span {
+    color: var(--primary);
+}
 
-                <!-- ===== Puzzle Assembly ===== -->
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Puzzle-1.JPEG" alt="Framed jigsaw puzzle on display" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Framed Puzzle Display</h3>
-                        <p>Completed jigsaw puzzle framed and ready for display</p>
-                    </div>
-                </div>
+.nav-menu {
+    display: flex;
+    gap: 36px;
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Puzzle-2.JPEG" alt="Tiger themed jigsaw puzzle framed" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Tiger Puzzle</h3>
-                        <p>Wildlife-themed jigsaw puzzle, framed and displayed</p>
-                    </div>
-                </div>
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-light);
+    position: relative;
+    transition: var(--transition);
+}
 
-                <div class="gallery-item" data-category="assembly">
-                    <img class="sample-img" src="assets/samples/Colouring-4.JPEG" alt="Completed cityscape jigsaw puzzle in frame" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Cityscape Puzzle</h3>
-                        <p>Completed cityscape jigsaw puzzle finished in two days</p>
-                    </div>
-                </div>
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
 
-                <!-- ===== Colouring Services ===== -->
-                <div class="gallery-item" data-category="creative">
-                    <img class="sample-img" src="assets/samples/Colouring-1.JPEG" alt="Sea creature painting with rich colors" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Sea Creature Painting</h3>
-                        <p>Detailed painting of marine life with rich, vibrant colors</p>
-                    </div>
-                </div>
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
 
-                <div class="gallery-item" data-category="creative">
-                    <img class="sample-img" src="assets/samples/Colouring-2.JPEG" alt="Sunset beach oil pastel artwork" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Sunset Beach Scene</h3>
-                        <p>Oil pastel artwork featuring a vibrant sunset landscape</p>
-                    </div>
-                </div>
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
 
-                <div class="gallery-item" data-category="creative">
-                    <img class="sample-img" src="assets/samples/Colouring-3.JPEG" alt="Coloured room interior illustration" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Room Interior Colouring</h3>
-                        <p>Coloured illustration of a furnished room with shelving and decor</p>
-                    </div>
-                </div>
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
 
-                <!-- ===== Fan Club Designs ===== -->
-                <div class="gallery-item" data-category="creative">
-                    <img class="sample-img" src="assets/samples/Fan-Club-Design-1.PNG" alt="Fan club welcome graphic design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Design</h3>
-                        <p>Custom welcome graphic design created for a fan club community</p>
-                    </div>
-                </div>
+.nav-toggle span {
+    width: 26px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: var(--transition);
+}
 
-                <div class="gallery-item" data-category="creative">
-                    <img class="sample-img" src="assets/samples/Fan-Club-Design-2.PNG" alt="Fan club themed welcome visual" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Design</h3>
-                        <p>Themed welcome visual with custom layout and styling</p>
-                    </div>
-                </div>
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
 
-                <!-- ===== Video Work ===== -->
-                <div class="gallery-item gallery-video" data-category="creative">
-                    <video src="assets/videos/Fan-Club-Video-1.webm" preload="none" controls></video>
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Video 1</h3>
-                        <p>Animated welcome video with effects and transitions</p>
-                    </div>
-                </div>
+/* ================================
+   Hero
+================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: var(--bg-white);
+}
 
-                <div class="gallery-item gallery-video" data-category="creative">
-                    <video src="assets/videos/Fan-Club-Video-2.webm" preload="none" controls></video>
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Video 2</h3>
-                        <p>Custom animated video with themed visuals and effects</p>
-                    </div>
-                </div>
+.hero-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(91, 79, 233, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
+}
 
-                <div class="gallery-item gallery-video" data-category="creative">
-                    <video src="assets/videos/Fan-Club-Video-3.webm" preload="none" controls></video>
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Video 3</h3>
-                        <p>Engaging welcome video with smooth transitions and text overlays</p>
-                    </div>
-                </div>
+.hero-bg-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(91, 79, 233, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
 
-                <div class="gallery-item gallery-video" data-category="creative">
-                    <video src="assets/videos/Fan-Club-Video-4.webm" preload="none" controls></video>
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Fan Club Welcome Video 4</h3>
-                        <p>Animated fan club video with creative visual effects</p>
-                    </div>
-                </div>
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    padding: 0 24px;
+    animation: fadeInUp 0.8s ease;
+}
 
-                <!-- ===== Document & Data Services (description cards) ===== -->
-                <div class="gallery-item" data-category="document">
-                    <div class="gallery-doc-card">
-                        <div class="doc-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
-                            </svg>
-                        </div>
-                        <h3>Excel Data Reporting</h3>
-                        <p>Professional data analysis with charts, pivot tables, and clean formatting</p>
-                    </div>
-                </div>
+.hero-greeting {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
 
-                <div class="gallery-item" data-category="document">
-                    <div class="gallery-doc-card">
-                        <div class="doc-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
-                            </svg>
-                        </div>
-                        <h3>Excel Data Reporting</h3>
-                        <p>Comprehensive data report with formatted tables and visualizations</p>
-                    </div>
-                </div>
+.hero-name {
+    font-family: var(--font-head);
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-                <div class="gallery-item" data-category="document">
-                    <div class="gallery-doc-card">
-                        <div class="doc-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14 2 14 8 20 8"/>
-                                <line x1="9" y1="13" x2="15" y2="13"/>
-                                <line x1="9" y1="17" x2="15" y2="17"/>
-                            </svg>
-                        </div>
-                        <h3>Assignment Assistance</h3>
-                        <p>Research, writing, and formatting support for academic assignments</p>
-                    </div>
-                </div>
+.hero-tagline {
+    font-family: var(--font-head);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 20px;
+}
 
-                <div class="gallery-item" data-category="document">
-                    <div class="gallery-doc-card">
-                        <div class="doc-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                            </svg>
-                        </div>
-                        <h3>Document Typing</h3>
-                        <p>Accurate typing and formatting of documents, reports, and manuscripts</p>
-                    </div>
-                </div>
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+}
 
-            </div>
-        </div>
-    </section>
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+}
 
-    <!-- ===== CTA Banner ===== -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Have a project in mind?</h2>
-                <p>Whether it's a document, a puzzle, a spreadsheet, or a video — I'm ready to help.</p>
-                <a href="#contact" class="btn btn-primary btn-large">Let's Work Together</a>
-            </div>
-        </div>
-    </section>
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
 
-    <!-- ===== Contact ===== -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Get in Touch</span>
-                <h2 class="section-title">Contact Me</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Let's Talk About Your Project</h3>
-                    <p>Fill out the form or reach me directly using the details below. I typically respond within 24 hours.</p>
-                    <div class="contact-details">
-                        <a href="mailto:katel.workinfo@gmail.com" class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">katel.workinfo@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/601112621729" target="_blank" rel="noopener" class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Phone / WhatsApp</span>
-                                <span class="contact-value">+6011-1262 1729</span>
-                            </div>
-                        </a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Kuala+Lumpur+Malaysia" target="_blank" rel="noopener" class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Kuala Lumpur, Malaysia</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ker-sin-l-57071a173" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect x="2" y="9" width="4" height="12"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/601112621729" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:katel.workinfo@gmail.com" class="social-link" aria-label="Email">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form-wrap">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="jane@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option>Typing Tasks</option>
-                                <option>Consultation</option>
-                                <option>Translation</option>
-                                <option>Assignment Helper</option>
-                                <option>Puzzle Assembly</option>
-                                <option>LEGO Assembly</option>
-                                <option>Colouring Services</option>
-                                <option>Excel Data Reporting</option>
-                                <option>Live Stream Video Editing</option>
-                                <option>Basic Video Editing</option>
-                                <option>Other / Not Sure</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                        <p class="form-note" id="form-note"></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#hero" class="nav-logo">Lim Ker Sin<span>.</span></a>
-                    <p>Professional freelance services you can rely on.</p>
-                    <p style="margin-top: 8px; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4);">KSTORE EST ENTERPRISE 202503331647 (TR0333461-U) &middot; SSM Registered</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#gallery">Samples</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Lim Ker Sin. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+.stat-number {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: var(--primary);
+    animation: scrollDown 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+    0% { top: -50%; }
+    100% { top: 100%; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   About
+================================ */
+.about {
+    background: var(--bg-white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-qualities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.quality-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--primary-light);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.quality-badge svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+}
+
+.about-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    text-align: center;
+    max-width: 360px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.about-card-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px;
+    background: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.about-card-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.about-card h3 {
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ================================
+   Services
+================================ */
+.services {
+    background: var(--bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary);
+    color: #fff;
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.service-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.service-card h3 {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.service-card p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.65;
+}
+
+/* ================================
+   Gallery
+================================ */
+.gallery {
+    background: var(--bg-white);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    font-family: var(--font-head);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.gallery-placeholder svg {
+    width: 64px;
+    height: 64px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-placeholder svg {
+    transform: scale(1.15);
+}
+
+/* Gradient backgrounds for gallery items */
+.gallery-grad-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+.gallery-grad-2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.gallery-grad-3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.gallery-grad-4 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+.gallery-grad-5 { background: linear-gradient(135deg, #fa709a, #fee140); }
+.gallery-grad-6 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+.gallery-grad-7 { background: linear-gradient(135deg, #ff9a56, #ff6a88); }
+.gallery-grad-8 { background: linear-gradient(135deg, #5B4FE9, #F97316); }
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: #fff;
+    transform: translateY(40%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.gallery-overlay h3 {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+
+.gallery-overlay p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
+/* Real image gallery items */
+.gallery-item img.sample-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img.sample-img {
+    transform: scale(1.05);
+}
+
+/* Video gallery items */
+.gallery-video {
+    background: #1a1a2e;
+}
+
+.gallery-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-video .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-video .play-overlay svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 2px;
+}
+
+.gallery-video:hover .play-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--primary-dark);
+}
+
+/* Document description cards in gallery */
+.gallery-doc-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg) 100%);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-doc-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.gallery-doc-card .doc-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-doc-card .doc-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-doc-card .doc-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gallery-doc-card h3 {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-doc-card h3 {
+    color: #fff;
+}
+
+.gallery-doc-card p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-doc-card p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================================
+   CTA Banner
+================================ */
+.cta-banner {
+    background: linear-gradient(135deg, var(--primary) 0%, #7B68EE 100%);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-family: var(--font-head);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+}
+
+.cta-banner .btn-primary {
+    background: #fff;
+    color: var(--primary);
+}
+
+.cta-banner .btn-primary:hover {
+    background: var(--bg-white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   Contact
+================================ */
+.contact {
+    background: var(--bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 48px;
+}
+
+.contact-info h3 {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.contact-info > p {
+    color: var(--text-light);
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: var(--transition);
+}
+
+.contact-detail-item:hover {
+    transform: translateX(4px);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.contact-value {
+    display: block;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 44px;
+    height: 44px;
+    background: var(--bg-white);
+    border: 1.5px solid var(--border);
