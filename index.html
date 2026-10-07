@@ -71,7 +71,7 @@ section{padding:125px 0}
 .about-lead{font-family:"Plus Jakarta Sans";font-size:clamp(27px,3.2vw,46px);line-height:1.05;letter-spacing:-.045em}
 .about-text{color:var(--muted);font-size:16px;max-width:550px}
 .about-text p+p{margin-top:20px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:78px}
 .tag{border:1px solid var(--line);padding:8px 11px;font-size:12px;background:var(--paper)}
 .services{background:var(--paper)}
 .service-list{border-top:1px solid var(--ink)}
@@ -124,6 +124,7 @@ section{padding:125px 0}
 .work-card.clickable{cursor:pointer}
 .work-card.clickable:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
 .work-card .work-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:2;transition:transform .55s var(--ease)}
+.work-card .work-cover[src$=".svg"]{object-fit:cover}
 .work-card.clickable:hover .work-cover{transform:scale(1.045)}
 .work-card .cover-placeholder{position:absolute;inset:0;display:flex;align-items:flex-end;padding:32px;background:linear-gradient(145deg,#f3efe7,#dfe8dd);color:var(--ink);z-index:2}
 .cover-placeholder strong{font-family:"Plus Jakarta Sans";font-size:42px;line-height:.95;letter-spacing:-.05em;max-width:280px}
@@ -350,7 +351,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
   <div class="work-grid">
    <article class="work-card clickable" tabindex="0" role="button" data-cat="documents" data-work="typing">
     <div class="visual has-image">
-     <div class="cover-placeholder"><strong>Typing &amp;<br>Assignment<br>Support</strong></div>
+     <img class="work-cover" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Word-Preview.svg" alt="Word document preview">
      <div class="card-overlay"></div>
     </div>
     <div class="card-badge">Documents</div>
@@ -359,10 +360,10 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 
    <article class="work-card clickable" tabindex="0" role="button" data-cat="documents" data-work="data">
     <div class="visual has-image">
-     <div class="cover-placeholder"><strong>Data<br>Reporting</strong></div>
+     <img class="work-cover" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/PDF-Preview.svg" alt="PDF report preview">
      <div class="card-overlay"></div>
     </div>
-    <div class="card-badge">Excel</div>
+    <div class="card-badge">Report</div>
     <div class="card-meta"><div class="card-title">Data Reporting</div><div class="card-type">2 files</div></div>
    </article>
 
@@ -531,7 +532,7 @@ const renderProject=(key)=>{
  const items=p.items.map(item=>{
   if(item.kind==="image") return `<div class="modal-item"><img loading="lazy" src="${item.src}" alt="${item.name}"><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
   if(item.kind==="video") return `<div class="modal-item"><video controls playsinline preload="metadata"><source src="${item.src}" type="video/webm"></video><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
-  return `<div class="modal-item"><div class="modal-file"><div class="modal-file-main"><div class="modal-file-icon">${item.type}</div><div class="modal-file-text"><div class="modal-file-name">${item.name}</div><div class="modal-file-type">${item.type} file</div></div></div><a class="modal-file-link" href="${item.href}" target="_blank" rel="noopener">Open file ↗</a></div></div>`;
+  return `<div class="modal-item"><div class="modal-file"><div class="modal-file-main"><div class="modal-file-icon">${item.type}</div><div class="modal-file-text"><div class="modal-file-type">Portfolio sample</div></div></div><a class="modal-file-link" href="${item.href}" target="_blank" rel="noopener">Open file ↗</a></div></div>`;
  }).join("");
  const fileHint=p.items.some(i=>i.kind==="file") ? '<div class="modal-hint">DOCX and XLSX files open as direct portfolio files; your browser may download them instead of previewing them.</div>' : "";
  return `<section class="modal-project"><div class="modal-project-head"><div><div class="work-modal-kicker">${p.kicker}</div><div class="modal-project-title">${p.title}</div></div><div class="modal-project-count">${p.items.length} item${p.items.length===1?"":"s"}</div></div><div class="modal-grid">${items}</div>${fileHint}</section>`;
