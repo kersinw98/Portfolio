@@ -10,7 +10,7 @@
 <title>Lim Ker Sin — Professional Services Provider</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Manrope:wght@400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
  --ink:#263238;--paper:#f7f9fb;--white:#ffffff;--muted:#68747d;
@@ -183,37 +183,44 @@ footer{background:var(--ink);color:#aaa69d;padding:25px 0;font-size:11px}
  .reveal{opacity:1;transform:none}
 }
 
-/* Handwritten display refresh */
+/* Typography and asset refresh */
 body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
-.logo,.hero h1,.section-head h2,.about-lead,.service h3,.marquee span,.contact h2,.contact-email,.preview-title,.card-title{font-family:"Comic Neue","Comic Sans MS",cursive}
-.logo{font-size:38px;font-weight:700;letter-spacing:-.035em;line-height:1}
-.logo i{width:10px;height:10px}
-.hero h1{font-size:clamp(78px,10.5vw,158px);font-weight:700;letter-spacing:-.055em;line-height:.86}
-.section-head h2{font-size:clamp(54px,6.8vw,94px);font-weight:700;letter-spacing:-.045em}
-.about-lead{font-size:clamp(32px,3.8vw,54px);font-weight:700;letter-spacing:-.035em;line-height:1}
-.service h3{font-size:clamp(25px,2.45vw,36px);font-weight:700}
+.logo,.hero h1,.section-head h2,.about-lead,.service h3,.marquee span,.contact h2,.contact-email,.preview-title,.card-title{font-family:"Plus Jakarta Sans",sans-serif}
+.logo{font-size:48px;font-weight:800;letter-spacing:-.045em;line-height:1}
+.logo i{width:11px;height:11px}
+.hero h1{font-size:clamp(82px,10.8vw,162px);font-weight:800;letter-spacing:-.06em;line-height:.84}
+.section-head h2{font-size:clamp(54px,6.8vw,94px);font-weight:800;letter-spacing:-.05em}
+.about-lead{font-size:clamp(32px,3.8vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.service h3{font-size:clamp(25px,2.45vw,36px);font-weight:800}
 .marquee span{font-size:clamp(32px,4.5vw,58px);font-weight:700}
-.contact h2{font-size:clamp(74px,12vw,172px);font-weight:700}
-.card-title{font-size:clamp(24px,2.2vw,30px);font-weight:700}
+.contact h2{font-size:clamp(74px,12vw,172px);font-weight:800}
+.card-title{font-size:clamp(24px,2.2vw,30px);font-weight:800}
 .hero-copy p,.about-text,.service p,.work-intro{font-family:"Manrope",sans-serif}
 .about-photo{background:#eee8df;border-radius:18px;min-height:480px;border:1px solid var(--line);box-shadow:12px 14px 0 rgba(38,50,56,.08)}
 .about-photo img{object-fit:cover;object-position:center top;width:100%;height:100%;min-height:480px}
-.about-photo .photo-note{font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:18px;text-transform:none;letter-spacing:.02em;border-radius:9px}
+.about-photo .photo-note{font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;font-weight:700;text-transform:none;letter-spacing:.02em;border-radius:9px}
 .work-card{border-radius:20px;border:1px solid rgba(255,255,255,.1);box-shadow:10px 12px 0 rgba(0,0,0,.16)}
 .work-card .visual{background:#f3efe7}
 .work-card .visual svg{width:100%;height:100%;min-height:300px;display:block}
-.card-badge{font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:15px;letter-spacing:.02em;border-radius:999px;padding:6px 11px}
-.card-type{font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:15px;letter-spacing:.02em}
-.note{font-family:"Patrick Hand","Comic Sans MS",cursive;font-size:17px}
+.card-badge{font-family:"Manrope",sans-serif;font-size:11px;letter-spacing:.06em;border-radius:999px;padding:6px 11px}
+.card-type{font-family:"Manrope",sans-serif;font-size:10px;letter-spacing:.12em}
+.note{font-family:"Manrope",sans-serif;font-size:12px}
 @media(max-width:560px){
- .logo{font-size:28px}
- .hero h1{font-size:62px}
+ .logo{font-size:32px}
+ .hero h1{font-size:64px}
  .section-head h2{font-size:52px}
  .contact h2{font-size:64px}
  .about-photo,.about-photo img{min-height:380px}
  .work-card{border-radius:16px}
 }
 
+
+.work-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:2}
+.visual.has-image .work-image{z-index:2}
+.visual.has-image svg{display:none}
+.visual.has-image .card-overlay{z-index:3}
+.visual.has-image + .card-badge{z-index:4}
+.visual.has-image + .card-badge + .card-meta{z-index:4}
 </style>
 </head>
 <body>
@@ -253,7 +260,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
  <div class="container">
   <div class="section-head"><div class="kicker">01 / About</div><h2>More than a freelancer.<br><span>A practical all-rounder.</span></h2></div>
   <div class="about-grid">
-   <div class="about-photo"><img src="https://avatars.githubusercontent.com/u/317582906?v=4" alt="Lim Ker Sin profile photo"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
+   <div class="about-photo"><img src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/ID%20Photo.PNG" alt="Lim Ker Sin profile photo" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/317582906?v=4';"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
    <div class="about-lead">A mix of psychology, hospitality, IT support and customer service — brought together to make work clearer, easier and more dependable.</div>
    <div class="about-text">
     <p>With a background in Psychology, Hotel Management, IT Service Desk and customer service, I bring people skills, technical knowledge, creativity and attention to detail to every project.</p>
