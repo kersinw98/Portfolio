@@ -49,7 +49,7 @@ header.scrolled{background:rgba(245,243,238,.88);backdrop-filter:blur(16px);bord
 .hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
 .hero-copy{padding-bottom:7px}
 .hero-copy p{font-size:17px;color:var(--muted);max-width:330px}
-.hero-tagline{margin-top:34px;font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(22px,2.4vw,34px);font-weight:700;line-height:1.05;letter-spacing:-.035em}.hero-tagline em{font-style:normal;color:var(--muted)}
+.hero-tagline{margin-top:30px;font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(25px,3vw,42px);font-weight:700;line-height:1.05;letter-spacing:-.035em}.hero-tagline em{font-style:normal;color:var(--muted)}
 .hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border:1px solid var(--ink);font-size:13px;font-weight:700;transition:.3s var(--ease)}
 .btn.dark{background:#263238;color:#ffffff}
@@ -66,7 +66,7 @@ section{padding:125px 0}
 .section-head h2{font-family:"Plus Jakarta Sans";font-size:clamp(43px,6vw,82px);line-height:.95;letter-spacing:-.065em;max-width:820px}
 .section-head h2 span{color:var(--muted)}
 .about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:360px 1fr;gap:80px;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .about-photo{position:relative;background:#e8eef1;min-height:430px;overflow:hidden;border-radius:8px}.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}.about-photo .photo-note{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.9);padding:8px 10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .about-lead{font-family:"Plus Jakarta Sans";font-size:clamp(27px,3.2vw,46px);line-height:1.05;letter-spacing:-.045em}
 .about-text{color:var(--muted);font-size:16px;max-width:550px}
@@ -120,6 +120,51 @@ section{padding:125px 0}
 .card-type{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#aaa}
 .card-overlay{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.85));z-index:1}
 .card-badge{position:absolute;top:17px;left:17px;z-index:3;font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:var(--lime);color:var(--ink);padding:6px 8px;font-weight:700}
+
+.work-card.clickable{cursor:pointer}
+.work-card.clickable:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.work-card .work-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:2;transition:transform .55s var(--ease)}
+.work-card.clickable:hover .work-cover{transform:scale(1.045)}
+.work-card .cover-placeholder{position:absolute;inset:0;display:flex;align-items:flex-end;padding:32px;background:linear-gradient(145deg,#f3efe7,#dfe8dd);color:var(--ink);z-index:2}
+.cover-placeholder strong{font-family:"Plus Jakarta Sans";font-size:42px;line-height:.95;letter-spacing:-.05em;max-width:280px}
+.work-card .work-cover + .card-overlay{z-index:3}
+.work-card .card-badge{z-index:4}
+.work-card .card-meta{z-index:4}
+.work-open{display:inline-flex;align-items:center;gap:8px;margin-top:18px;border:1px solid #5d615f;padding:10px 13px;color:#d8d4cc;font-size:12px;font-weight:700;background:transparent;cursor:pointer}
+.work-open:hover{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.work-modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:22px;background:rgba(12,16,18,.72);backdrop-filter:blur(10px)}
+.work-modal.open{display:grid}
+.work-modal-panel{width:min(1180px,100%);max-height:min(90vh,920px);background:#fbfaf6;color:var(--ink);border-radius:24px;box-shadow:0 30px 100px rgba(0,0,0,.35);display:flex;flex-direction:column;overflow:hidden}
+.work-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:25px;padding:28px 30px 24px;border-bottom:1px solid var(--line);background:#fff}
+.work-modal-kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.work-modal-title{font-family:"Plus Jakarta Sans";font-size:clamp(30px,4vw,48px);line-height:.95;letter-spacing:-.05em;margin-top:8px}
+.work-modal-close{border:1px solid var(--ink);background:transparent;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer;flex:0 0 auto}
+.work-modal-close:hover{background:var(--ink);color:#fff}
+.work-modal-body{overflow:auto;padding:28px 30px 34px}
+.modal-project{padding:28px 0;border-top:1px solid var(--line)}
+.modal-project:first-child{border-top:0;padding-top:0}
+.modal-project-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}
+.modal-project-title{font-family:"Plus Jakarta Sans";font-size:28px;letter-spacing:-.045em}
+.modal-project-count{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.modal-item{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.modal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center center;display:block}
+.modal-item video{width:100%;aspect-ratio:16/9;display:block;background:#151515}
+.modal-item-footer{padding:12px 13px 14px}
+.modal-item-name{font-size:12px;font-weight:700;line-height:1.35}
+.modal-file{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 18px}
+.modal-file-icon{width:42px;height:42px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-family:"Plus Jakarta Sans";font-weight:800;font-size:12px;flex:0 0 auto}
+.modal-file-main{display:flex;align-items:center;gap:13px;min-width:0}
+.modal-file-text{min-width:0}
+.modal-file-name{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-file-type{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.modal-file-link{display:inline-flex;padding:9px 12px;border:1px solid var(--ink);font-size:11px;font-weight:800;flex:0 0 auto}
+.modal-file-link:hover{background:var(--lime)}
+.modal-hint{margin-top:10px;color:var(--muted);font-size:12px}
+body.modal-open{overflow:hidden}
+@media(max-width:850px){.modal-grid{grid-template-columns:repeat(2,1fr)}.work-modal{padding:12px}.work-modal-head,.work-modal-body{padding-left:20px;padding-right:20px}}
+@media(max-width:560px){.modal-grid{grid-template-columns:1fr}.work-modal-panel{max-height:94vh;border-radius:18px}.work-modal-head{padding-top:20px}.modal-file{align-items:flex-start;flex-direction:column}.modal-file-link{width:100%;justify-content:center}}
+
 .note{margin-top:24px;color:#88847c;font-size:12px}
 .contact{background:var(--lime);min-height:72vh;display:flex;align-items:center}
 .contact-wrap{width:100%}
@@ -142,7 +187,7 @@ footer{background:var(--ink);color:#aaa69d;padding:25px 0;font-size:11px}
  .work-card:nth-child(1),.work-card:nth-child(4){grid-column:span 6}
 }
 @media(max-width:850px){
- .about-grid{grid-template-columns:1fr;gap:35px}.about-photo{min-height:360px;max-width:420px}
+ .about-grid{grid-template-columns:1fr;gap:35px}.about-photo{min-height:300px;height:300px;max-width:520px}
  .container{width:min(720px,calc(100% - 32px))}
  .nav{min-height:32px}
  .navlinks{display:none}
@@ -161,7 +206,7 @@ footer{background:var(--ink);color:#aaa69d;padding:25px 0;font-size:11px}
  .contact-bottom{align-items:start;flex-direction:column;gap:25px}.contact-meta{text-align:left}
 }
 @media(max-width:560px){
- .about-photo{min-height:330px}
+ .about-photo{min-height:260px;height:260px}
  .container{width:calc(100% - 28px)}
  header{padding:13px 0}
  .logo{font-size:17px}
@@ -189,7 +234,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 .logo,.hero h1,.section-head h2,.about-lead,.service h3,.marquee span,.contact h2,.contact-email,.preview-title,.card-title{font-family:"Plus Jakarta Sans",sans-serif}
 .logo{font-size:48px;font-weight:800;letter-spacing:-.045em;line-height:1}
 .logo i{width:11px;height:11px}
-.hero h1{font-size:clamp(92px,12vw,180px);font-weight:800;letter-spacing:-.065em;line-height:.82}
+.hero h1{font-size:clamp(105px,15.5vw,240px);font-weight:800;letter-spacing:-.075em;line-height:.78}
 .section-head h2{font-size:clamp(54px,6.8vw,94px);font-weight:800;letter-spacing:-.05em}
 .about-lead{font-size:clamp(32px,3.8vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1}
 .service h3{font-size:clamp(25px,2.45vw,36px);font-weight:800}
@@ -208,10 +253,10 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 .note{font-family:"Manrope",sans-serif;font-size:12px}
 @media(max-width:560px){
  .logo{font-size:32px}
- .hero h1{font-size:68px}
+ .hero h1{font-size:clamp(72px,22vw,118px)}
  .section-head h2{font-size:52px}
  .contact h2{font-size:64px}
- .about-photo,.about-photo img{min-height:380px}
+ .about-photo,.about-photo img{min-height:0;height:260px}
  .work-card{border-radius:16px}
 }
 
@@ -260,14 +305,17 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 
 <section class="about reveal" id="about">
  <div class="container">
-  <div class="section-head"><div class="kicker">01 / About</div><h2>More than a freelancer.<br><span>A practical all-rounder.</span></h2></div>
+  <div class="section-head"><div class="kicker">01 / About</div><h2>People skills.<br><span>Practical support.</span></h2></div>
   <div class="about-grid">
-   <div class="about-photo"><img src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/ID%20Photo.PNG" alt="Lim Ker Sin profile photo" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/317582906?v=4';"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
-   <div class="about-lead">A mix of psychology, hospitality, IT support and customer service — brought together to make work clearer, easier and more dependable.</div>
    <div class="about-text">
     <p>With a background in Psychology, Hotel Management, IT Service Desk and customer service, I bring people skills, technical knowledge, creativity and attention to detail to every project.</p>
     <p>I provide flexible freelance support for individuals, students, creators and small businesses — from everyday admin and data work to creative and hands-on projects.</p>
-    <div class="tags"><span class="tag">Psychology</span><span class="tag">Hotel Management</span><span class="tag">IT Service Desk</span><span class="tag">Customer Service</span><span class="tag">Creative Support</span></div>
+   </div>
+   <div>
+    <div class="about-photo"><img src="SAMPLES/ID%20Photo.PNG" alt="Lim Ker Sin profile photo"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
+    <div class="tags">
+     <span class="tag">Psychology</span><span class="tag">Hotel Management</span><span class="tag">IT Service Desk</span><span class="tag">Customer Service</span><span class="tag">Creative Support</span>
+    </div>
    </div>
   </div>
  </div>
@@ -290,24 +338,80 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 
 <section class="work reveal" id="work">
  <div class="container">
-  <div class="section-head"><div class="kicker">03 / Selected work</div><h2>Real work.<br><span>Real examples.</span></h2></div>
-  <p class="work-intro">A visual index of the services and project types I work on. Your selected projects and service samples will be shown here, with private client and school details removed before publication.</p>
-  <div class="filters" role="group" aria-label="Portfolio filters">
-   <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="documents">Documents & Data</button><button class="filter" data-filter="creative">Creative & Video</button><button class="filter" data-filter="assembly">Assembly</button>
+  <div class="section-head"><div class="kicker">03 / Work</div><h2>Real work.<br><span>All in one place.</span></h2></div>
+  <div class="work-intro">
+   <p>Click any category to open the complete set of files, photos and videos for that service. The gallery uses the work you uploaded to the SAMPLES folder.</p>
+   <button class="work-open" type="button" data-work="all">Open all work ↗</button>
   </div>
   <div class="work-grid">
-   <article class="work-card" data-cat="documents"><div class="visual"><svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="560" rx="28" fill="#f7f1e6"/><rect x="48" y="40" width="804" height="480" rx="18" fill="#fffdf8" stroke="#d8cfc1" stroke-width="3"/><text x="85" y="92" font-family="Plus Jakarta Sans,sans-serif" font-size="28" font-weight="700" fill="#263238">DOCUMENT FORMATTING</text><text x="85" y="122" font-family="Arial" font-size="14" fill="#7b746b">Sanitized sample • clean typing • structured layout</text><rect x="85" y="155" width="360" height="14" rx="7" fill="#d8cfc1"/><rect x="85" y="185" width="680" height="9" rx="4" fill="#e9e1d5"/><rect x="85" y="210" width="610" height="9" rx="4" fill="#e9e1d5"/><rect x="85" y="260" width="680" height="170" rx="12" fill="#f7f4ee" stroke="#ded5c9"/><text x="110" y="295" font-family="Arial" font-size="13" fill="#59636a">Heading</text><text x="410" y="295" font-family="Arial" font-size="13" fill="#59636a">Page-ready body content</text><line x1="105" y1="315" x2="745" y2="315" stroke="#d8cfc1"/><rect x="110" y="338" width="250" height="8" rx="4" fill="#d8cfc1"/><rect x="410" y="338" width="290" height="8" rx="4" fill="#ddd5ca"/><rect x="110" y="362" width="230" height="8" rx="4" fill="#e3dbd0"/><rect x="410" y="362" width="300" height="8" rx="4" fill="#e3dbd0"/><rect x="110" y="386" width="270" height="8" rx="4" fill="#e3dbd0"/><rect x="410" y="386" width="250" height="8" rx="4" fill="#e3dbd0"/></svg><div class="card-overlay"></div></div><div class="card-badge">Documents</div><div class="card-meta"><div class="card-title">Typing & Assignment Support</div><div class="card-type">Sample</div></div></article>
-   <article class="work-card" data-cat="documents"><div class="visual"><svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="560" rx="28" fill="#eef4eb"/><rect x="45" y="42" width="810" height="475" rx="18" fill="#fff" stroke="#c7d8bf" stroke-width="3"/><text x="78" y="90" font-family="Plus Jakarta Sans,sans-serif" font-size="29" font-weight="700" fill="#263238">EXCEL DATA REPORTING</text><text x="78" y="120" font-family="Arial" font-size="14" fill="#66746c">Sanitized sample • clear tables • readable reporting</text><rect x="78" y="150" width="744" height="54" rx="8" fill="#263238"/><text x="100" y="184" font-family="Arial" font-size="14" fill="#fff">Item</text><text x="400" y="184" font-family="Arial" font-size="14" fill="#fff">Qty</text><text x="560" y="184" font-family="Arial" font-size="14" fill="#fff">Unit</text><text x="700" y="184" font-family="Arial" font-size="14" fill="#fff">Total</text><rect x="78" y="220" width="744" height="45" fill="#f7faf5"/><rect x="78" y="265" width="744" height="45" fill="#fff"/><rect x="78" y="310" width="744" height="45" fill="#f7faf5"/><rect x="78" y="355" width="744" height="45" fill="#fff"/><rect x="78" y="400" width="744" height="45" fill="#f7faf5"/><line x1="78" y1="220" x2="822" y2="220" stroke="#dde6d9"/><line x1="78" y1="265" x2="822" y2="265" stroke="#dde6d9"/><line x1="78" y1="310" x2="822" y2="310" stroke="#dde6d9"/><line x1="78" y1="355" x2="822" y2="355" stroke="#dde6d9"/><line x1="78" y1="400" x2="822" y2="400" stroke="#dde6d9"/><text x="100" y="248" font-family="Arial" font-size="13" fill="#59636a">Project A</text><text x="400" y="248" font-family="Arial" font-size="13" fill="#59636a">12</text><text x="560" y="248" font-family="Arial" font-size="13" fill="#59636a">RM</text><text x="700" y="248" font-family="Arial" font-size="13" fill="#59636a">240</text><text x="100" y="293" font-family="Arial" font-size="13" fill="#59636a">Project B</text><text x="400" y="293" font-family="Arial" font-size="13" fill="#59636a">8</text><text x="560" y="293" font-family="Arial" font-size="13" fill="#59636a">RM</text><text x="700" y="293" font-family="Arial" font-size="13" fill="#59636a">160</text><text x="100" y="338" font-family="Arial" font-size="13" fill="#59636a">Project C</text><text x="400" y="338" font-family="Arial" font-size="13" fill="#59636a">15</text><text x="560" y="338" font-family="Arial" font-size="13" fill="#59636a">RM</text><text x="700" y="338" font-family="Arial" font-size="13" fill="#59636a">300</text><text x="100" y="383" font-family="Arial" font-size="13" fill="#59636a">Project D</text><text x="400" y="383" font-family="Arial" font-size="13" fill="#59636a">10</text><text x="560" y="383" font-family="Arial" font-size="13" fill="#59636a">RM</text><text x="700" y="383" font-family="Arial" font-size="13" fill="#59636a">200</text><text x="100" y="428" font-family="Arial" font-size="13" fill="#59636a">Project E</text><text x="400" y="428" font-family="Arial" font-size="13" fill="#59636a">6</text><text x="560" y="428" font-family="Arial" font-size="13" fill="#59636a">RM</text><text x="700" y="428" font-family="Arial" font-size="13" fill="#59636a">120</text></svg><div class="card-overlay"></div></div><div class="card-badge">Excel</div><div class="card-meta"><div class="card-title">Data Reporting</div><div class="card-type">Sample</div></div></article>
-   <article class="work-card" data-cat="creative"><div class="visual"><svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="560" rx="28" fill="#1d2024"/><rect x="42" y="42" width="816" height="476" rx="18" fill="#111316" stroke="#3d434b" stroke-width="3"/><text x="75" y="92" font-family="Plus Jakarta Sans,sans-serif" font-size="29" font-weight="700" fill="#d9f28f">LIVESTREAM EFFECTS</text><rect x="75" y="120" width="750" height="250" rx="16" fill="#242932"/><circle cx="450" cy="245" r="72" fill="none" stroke="#ff9b78" stroke-width="7"/><path d="M405 245h90M450 200v90" stroke="#9bd7ff" stroke-width="7"/><text x="450" y="332" text-anchor="middle" font-family="Arial" font-size="16" fill="#9da6b0">LIVE PREVIEW</text><rect x="75" y="395" width="180" height="22" rx="11" fill="#ff9b78"/><rect x="268" y="395" width="270" height="22" rx="11" fill="#525a65"/><rect x="551" y="395" width="170" height="22" rx="11" fill="#9bd7ff"/><rect x="75" y="440" width="645" height="14" rx="7" fill="#343b45"/><text x="75" y="485" font-family="Arial" font-size="13" fill="#9da6b0">Overlay timing • transitions • transparent effect workflow</text></svg><div class="card-overlay"></div></div><div class="card-badge">Video</div><div class="card-meta"><div class="card-title">Livestream Effects</div><div class="card-type">Creative</div></div></article>
-   <article class="work-card" data-cat="creative"><div class="visual"><img class="work-image" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Fan%20Club%20Photo%20Design%201.PNG" alt="FAN CLUB CREATIVE" onload="this.parentElement.classList.add('has-image')"><div class="card-overlay"></div></div><div class="card-badge">Design</div><div class="card-meta"><div class="card-title">Fan Club Creative</div><div class="card-type">Creative</div></div></article>
-   <article class="work-card" data-cat="assembly"><div class="visual"><img class="work-image" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Lego%201.JPEG" alt="LEGO ASSEMBLY" onload="this.parentElement.classList.add('has-image')"><div class="card-overlay"></div></div><div class="card-badge">LEGO</div><div class="card-meta"><div class="card-title">LEGO Assembly</div><div class="card-type">Hands-on</div></div></article>
-   <article class="work-card" data-cat="assembly"><div class="visual"><img class="work-image" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Puzzle%201.JPEG" alt="PUZZLE ASSEMBLY" onload="this.parentElement.classList.add('has-image')"><div class="card-overlay"></div></div><div class="card-badge">Puzzle</div><div class="card-meta"><div class="card-title">Puzzle Assembly</div><div class="card-type">Hands-on</div></div></article>
-   <article class="work-card" data-cat="creative"><div class="visual"><img class="work-image" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Colouring%20Services%201.JPEG" alt="COLOURING SERVICE" onload="this.parentElement.classList.add('has-image')"><div class="card-overlay"></div></div><div class="card-badge">Colouring</div><div class="card-meta"><div class="card-title">Colouring Services</div><div class="card-type">Creative</div></div></article>
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="documents" data-work="typing">
+    <div class="visual has-image">
+     <div class="cover-placeholder"><strong>Typing &amp;<br>Assignment<br>Support</strong></div>
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Documents</div>
+    <div class="card-meta"><div class="card-title">Typing &amp; Assignment Support</div><div class="card-type">2 files</div></div>
+   </article>
+
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="documents" data-work="data">
+    <div class="visual has-image">
+     <div class="cover-placeholder"><strong>Data<br>Reporting</strong></div>
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Excel</div>
+    <div class="card-meta"><div class="card-title">Data Reporting</div><div class="card-type">2 files</div></div>
+   </article>
+
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="creative" data-work="livestream">
+    <div class="visual has-image">
+     <img class="work-cover" src="SAMPLES/Fan%20Club%20Photo%20Design%201.PNG" alt="Fan Club photo design">
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Video</div>
+    <div class="card-meta"><div class="card-title">Livestream Effects</div><div class="card-type">6 files</div></div>
+   </article>
+
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="assembly" data-work="lego">
+    <div class="visual has-image">
+     <img class="work-cover" src="SAMPLES/Lego%201.JPEG" alt="LEGO assembly work">
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Hands-on</div>
+    <div class="card-meta"><div class="card-title">LEGO Assembly</div><div class="card-type">9 photos</div></div>
+   </article>
+
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="assembly" data-work="puzzle">
+    <div class="visual has-image">
+     <img class="work-cover" src="SAMPLES/Puzzle%201.JPEG" alt="Puzzle assembly work">
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Hands-on</div>
+    <div class="card-meta"><div class="card-title">Puzzle Assembly</div><div class="card-type">3 photos</div></div>
+   </article>
+
+   <article class="work-card clickable" tabindex="0" role="button" data-cat="assembly" data-work="colouring">
+    <div class="visual has-image">
+     <img class="work-cover" src="SAMPLES/Colouring%20Services%201.JPEG" alt="Colouring services work">
+     <div class="card-overlay"></div>
+    </div>
+    <div class="card-badge">Creative</div>
+    <div class="card-meta"><div class="card-title">Colouring Services</div><div class="card-type">4 photos</div></div>
+   </article>
   </div>
-  <p class="note">Sanitized service previews are shown here. Private client, school and personal details are intentionally removed.</p>
+
+  <p class="note">File previews open inside the portfolio for photos and videos. DOCX and XLSX samples are available as direct files.</p>
  </div>
 </section>
 
+<div class="work-modal" id="workModal" aria-hidden="true">
+ <div class="work-modal-panel" role="dialog" aria-modal="true" aria-labelledby="workModalTitle">
+  <div class="work-modal-head">
+   <div><div class="work-modal-kicker">Portfolio gallery</div><div class="work-modal-title" id="workModalTitle">All work</div></div>
+   <button class="work-modal-close" id="workModalClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="work-modal-body" id="workModalBody"></div>
+ </div>
+</div>
 <section class="contact reveal" id="contact">
  <div class="container contact-wrap">
   <div class="kicker">04 / Contact</div>
@@ -326,6 +430,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 <script>
 const header=document.getElementById("header");
 addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>20));
+
 const menu=document.getElementById("menu"), nav=document.querySelector(".navlinks");
 menu.addEventListener("click",()=>{
  const open=nav.classList.toggle("mobile-open");
@@ -333,15 +438,116 @@ menu.addEventListener("click",()=>{
  menu.setAttribute("aria-expanded",String(open));
 });
 document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>{
- nav.classList.remove("mobile-open");menu.classList.remove("open");menu.setAttribute("aria-expanded","false");
+ nav.classList.remove("mobile-open");
+ menu.classList.remove("open");
+ menu.setAttribute("aria-expanded","false");
 }));
+
 const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("show")),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
-document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
- document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
- const f=btn.dataset.filter;
- document.querySelectorAll(".work-card").forEach(c=>c.dataset.hidden=f!=="all"&&c.dataset.cat!==f?"true":"false");
-}));
+
+const workData={
+ typing:{
+  title:"Typing & Assignment Support",
+  kicker:"Documents",
+  items:[
+   {kind:"file",name:"Typing Task.docx",type:"DOCX",href:"SAMPLES/Typing%20Task.docx"},
+   {kind:"file",name:"Assignment.docx",type:"DOCX",href:"SAMPLES/Assignment.docx"}
+  ]
+ },
+ data:{
+  title:"Data Reporting",
+  kicker:"Excel",
+  items:[
+   {kind:"file",name:"Excel Data Reporting 1.xlsx",type:"XLSX",href:"SAMPLES/Excel%20Data%20Reporting%201.xlsx"},
+   {kind:"file",name:"Excel Data Reporting 2.xlsx",type:"XLSX",href:"SAMPLES/Excel%20Data%20Reporting%202.xlsx"}
+  ]
+ },
+ livestream:{
+  title:"Livestream Effects",
+  kicker:"Video + creative",
+  items:[
+   {kind:"image",name:"Fan Club Photo Design 1.PNG",src:"SAMPLES/Fan%20Club%20Photo%20Design%201.PNG"},
+   {kind:"image",name:"Fan Club Photo Design 2.PNG",src:"SAMPLES/Fan%20Club%20Photo%20Design%202.PNG"},
+   {kind:"video",name:"Fan Club Welcome Video 1.webm",src:"SAMPLES/Fan%20Club%20Welcome%20Video%201.webm"},
+   {kind:"video",name:"Fan Club Welcome Video 2.webm",src:"SAMPLES/Fan%20Club%20Welcome%20Video%202.webm"},
+   {kind:"video",name:"Fan Club Welcome Video 3.webm",src:"SAMPLES/Fan%20Club%20Welcome%20Video%203.webm"},
+   {kind:"video",name:"Fan Club Welcome Video 4.webm",src:"SAMPLES/Fan%20Club%20Welcome%20Video%204.webm"}
+  ]
+ },
+ lego:{
+  title:"LEGO Assembly",
+  kicker:"Hands-on work",
+  items:[
+   {kind:"image",name:"Lego 1.JPEG",src:"SAMPLES/Lego%201.JPEG"},
+   {kind:"image",name:"Lego 2.JPEG",src:"SAMPLES/Lego%202.JPEG"},
+   {kind:"image",name:"Lego 3.JPEG",src:"SAMPLES/Lego%203.JPEG"},
+   {kind:"image",name:"Lego 5.jpeg",src:"SAMPLES/Lego%205.jpeg"},
+   {kind:"image",name:"Lego 6.JPEG",src:"SAMPLES/Lego%206.JPEG"},
+   {kind:"image",name:"Lego 7.JPEG",src:"SAMPLES/Lego%207.JPEG"},
+   {kind:"image",name:"Lego 8.JPEG",src:"SAMPLES/Lego%208.JPEG"},
+   {kind:"image",name:"Lego 9.JPEG",src:"SAMPLES/Lego%209.JPEG"},
+   {kind:"image",name:"Lego 10.JPEG",src:"SAMPLES/Lego%2010.JPEG"}
+  ]
+ },
+ puzzle:{
+  title:"Puzzle Assembly",
+  kicker:"Hands-on work",
+  items:[
+   {kind:"image",name:"Puzzle 1.JPEG",src:"SAMPLES/Puzzle%201.JPEG"},
+   {kind:"image",name:"Puzzle 2.JPEG",src:"SAMPLES/Puzzle%202.JPEG"},
+   {kind:"image",name:"Puzzle 3.JPEG",src:"SAMPLES/Puzzle%203.JPEG"}
+  ]
+ },
+ colouring:{
+  title:"Colouring Services",
+  kicker:"Creative work",
+  items:[
+   {kind:"image",name:"Colouring Services 1.JPEG",src:"SAMPLES/Colouring%20Services%201.JPEG"},
+   {kind:"image",name:"Colouring Services 2.JPEG",src:"SAMPLES/Colouring%20Services%202.JPEG"},
+   {kind:"image",name:"Colouring Services 3.JPEG",src:"SAMPLES/Colouring%20Services%203.JPEG"},
+   {kind:"image",name:"Colouring Services 4.JPEG",src:"SAMPLES/Colouring%20Services%204.JPEG"}
+  ]
+ }
+};
+
+const order=["typing","data","livestream","lego","puzzle","colouring"];
+const modal=document.getElementById("workModal");
+const modalBody=document.getElementById("workModalBody");
+const modalTitle=document.getElementById("workModalTitle");
+const closeModal=()=>{
+ modal.classList.remove("open");
+ modal.setAttribute("aria-hidden","true");
+ document.body.classList.remove("modal-open");
+ modalBody.innerHTML="";
+};
+const renderProject=(key)=>{
+ const p=workData[key];
+ if(!p)return "";
+ const items=p.items.map(item=>{
+  if(item.kind==="image") return `<div class="modal-item"><img loading="lazy" src="${item.src}" alt="${item.name}"><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
+  if(item.kind==="video") return `<div class="modal-item"><video controls playsinline preload="metadata"><source src="${item.src}" type="video/webm"></video><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
+  return `<div class="modal-item"><div class="modal-file"><div class="modal-file-main"><div class="modal-file-icon">${item.type}</div><div class="modal-file-text"><div class="modal-file-name">${item.name}</div><div class="modal-file-type">${item.type} file</div></div></div><a class="modal-file-link" href="${item.href}" target="_blank" rel="noopener">Open file ↗</a></div></div>`;
+ }).join("");
+ const fileHint=p.items.some(i=>i.kind==="file") ? '<div class="modal-hint">DOCX and XLSX files open as direct portfolio files; your browser may download them instead of previewing them.</div>' : "";
+ return `<section class="modal-project"><div class="modal-project-head"><div><div class="work-modal-kicker">${p.kicker}</div><div class="modal-project-title">${p.title}</div></div><div class="modal-project-count">${p.items.length} item${p.items.length===1?"":"s"}</div></div><div class="modal-grid">${items}</div>${fileHint}</section>`;
+};
+const openWork=(key)=>{
+ const keys=key==="all"?order:[key];
+ modalTitle.textContent=key==="all"?"All work":workData[key].title;
+ modalBody.innerHTML=keys.map(renderProject).join("");
+ modal.classList.add("open");
+ modal.setAttribute("aria-hidden","false");
+ document.body.classList.add("modal-open");
+};
+document.querySelectorAll("[data-work]").forEach(el=>{
+ const open=()=>openWork(el.dataset.work);
+ el.addEventListener("click",open);
+ el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" ") {e.preventDefault();open();}});
+});
+document.getElementById("workModalClose").addEventListener("click",closeModal);
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))closeModal();});
 </script>
 </body>
 </html>
