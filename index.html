@@ -234,7 +234,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 .logo,.hero h1,.section-head h2,.about-lead,.service h3,.marquee span,.contact h2,.contact-email,.preview-title,.card-title{font-family:"Plus Jakarta Sans",sans-serif}
 .logo{font-size:48px;font-weight:800;letter-spacing:-.045em;line-height:1}
 .logo i{width:11px;height:11px}
-.hero h1{font-size:clamp(120px,18vw,280px);font-weight:800;letter-spacing:-.075em;line-height:.76}
+.hero h1{font-size:clamp(48px,9.3vw,145px);font-weight:800;letter-spacing:-.075em;line-height:.86;white-space:nowrap;max-width:none}
 .section-head h2{font-size:clamp(54px,6.8vw,94px);font-weight:800;letter-spacing:-.05em}
 .about-lead{font-size:clamp(32px,3.8vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1}
 .service h3{font-size:clamp(25px,2.45vw,36px);font-weight:800}
@@ -267,6 +267,10 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 .visual.has-image .card-overlay{z-index:3}
 .visual.has-image + .card-badge{z-index:4}
 .visual.has-image + .card-badge + .card-meta{z-index:4}
+/* Final layout adjustments */
+.hero h1{font-size:clamp(48px,9.3vw,145px);line-height:.86;white-space:nowrap;max-width:none}
+@media(max-width:850px){.hero h1{font-size:clamp(48px,14vw,100px);white-space:nowrap}}
+@media(max-width:560px){.hero h1{font-size:clamp(42px,12vw,78px);white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -285,7 +289,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
  <div class="container hero-grid">
   <div>
    <div class="eyebrow kicker"><span></span> Professional Services Provider</div>
-   <h1>Lim Ker<br>Sin</h1>
+   <h1>Lim Ker Sin</h1>
    <div class="hero-tagline">Work that is <em>useful.</em><br>Work that gets <em>done.</em></div>
    <div class="scroll"><i></i> Scroll to explore</div>
   </div>
@@ -310,12 +314,12 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
    <div class="about-text">
     <p>With a background in Psychology, Hotel Management, IT Service Desk and customer service, I bring people skills, technical knowledge, creativity and attention to detail to every project.</p>
     <p>I provide flexible freelance support for individuals, students, creators and small businesses — from everyday admin and data work to creative and hands-on projects.</p>
-   </div>
-   <div>
-    <div class="about-photo"><img src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/ID%20Photo.PNG" alt="Lim Ker Sin profile photo"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
     <div class="tags">
      <span class="tag">Psychology</span><span class="tag">Hotel Management</span><span class="tag">IT Service Desk</span><span class="tag">Customer Service</span><span class="tag">Creative Support</span>
     </div>
+   </div>
+   <div>
+    <div class="about-photo"><img src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/ID%20Photo.PNG" alt="Lim Ker Sin profile photo"><div class="photo-note">Hi, I'm Katelyn ♡</div></div>
    </div>
   </div>
  </div>
@@ -373,7 +377,7 @@ body{font-family:"Manrope",sans-serif;background:#fbfaf6;color:#263238}
 
    <article class="work-card clickable" tabindex="0" role="button" data-cat="assembly" data-work="lego">
     <div class="visual has-image">
-     <img class="work-cover" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Lego%201.JPEG" alt="LEGO assembly work">
+     <img class="work-cover" src="https://raw.githubusercontent.com/kersinw98/Portfolio/main/SAMPLES/Lego%202.JPEG" alt="LEGO assembly work">
      <div class="card-overlay"></div>
     </div>
     <div class="card-badge">Hands-on</div>
