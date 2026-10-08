@@ -561,9 +561,10 @@ const renderProject=(key)=>{
  const items=p.items.map(item=>{
   if(item.kind==="image") return `<div class="modal-item"><img loading="lazy" src="${item.src}" alt="${item.name}"><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
   if(item.kind==="video") return `<div class="modal-item"><video controls playsinline preload="metadata"><source src="${item.src}" type="video/webm"></video><div class="modal-item-footer"><div class="modal-item-name">${item.name}</div></div></div>`;
-  return `<div class="modal-item"><div class="modal-file"><div class="modal-file-main"><div class="modal-file-icon">${item.type}</div><div class="modal-file-text"><div class="modal-file-type">Portfolio sample</div></div></div><a class="modal-file-link" href="${item.href}" target="_blank" rel="noopener">Open file ↗</a></div></div>`;
+  const viewerHref="https://view.officeapps.live.com/op/view.aspx?src="+encodeURIComponent(item.href);
+  return `<div class="modal-item"><div class="modal-file"><div class="modal-file-main"><div class="modal-file-icon">${item.type}</div><div class="modal-file-text"><div class="modal-file-name">${item.name}</div><div class="modal-file-type">Portfolio sample</div></div></div><a class="modal-file-link" href="${viewerHref}" target="_blank" rel="noopener">Preview ↗</a></div><div class="modal-file" style="padding-top:0"><a class="modal-file-link" href="${item.href}" target="_blank" rel="noopener" download>Download ↧</a></div></div>`;
  }).join("");
- const fileHint=p.items.some(i=>i.kind==="file") ? '<div class="modal-hint">DOCX and XLSX files open as direct portfolio files; your browser may download them instead of previewing them.</div>' : "";
+ const fileHint=p.items.some(i=>i.kind==="file") ? '<div class="modal-hint">Word and Excel samples now use an Office web preview, with a separate download option.</div>' : "";
  return `<section class="modal-project"><div class="modal-project-head"><div><div class="work-modal-kicker">${p.kicker}</div><div class="modal-project-title">${p.title}</div></div><div class="modal-project-count">${p.items.length} item${p.items.length===1?"":"s"}</div></div><div class="modal-grid">${items}</div>${fileHint}</section>`;
 };
 const openWork=(key)=>{
